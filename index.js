@@ -12,12 +12,10 @@ const {initialMongooseConnection} = require("./mongoose.initialconnect.js");
 initialMongooseConnection();
 
 const newBooking = require("./booked.rides.js");
-const driverWeeklyReports = require("./getweeklyearnings.driver.js");
 
 
 // For adding new cab details
 app.use("/newbookedcab" , newBooking);
-app.use("/driverweeklyreports", driverWeeklyReports );
 
 app.get('/', (req, res) => {
   res.send('Hello Express app!')
